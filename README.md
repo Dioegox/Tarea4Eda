@@ -10,7 +10,7 @@ para correr ABB
 3. cd build
 4. cmake ..
 5. make
-6. ./test
+6. ./test_abb
 
 
 Para correr AVL
