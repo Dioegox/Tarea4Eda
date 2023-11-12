@@ -23,9 +23,9 @@ int main(int nargas, char** vargs){
     }
 
     clock_t endInsert = clock();
-    double elapsedTimeInsert = double(endInsert - startInsert) / CLOCKS_PER_SEC;
+    double elapsedTimeInsert = double(endInsert - startInsert) / (CLOCKS_PER_SEC / 1000);
 
-    std::cout << "Tiempo de inserción: " << elapsedTimeInsert << " segundos" << std::endl;
+    std::cout << "Tiempo de inserción: " << elapsedTimeInsert << " milisegundos" << std::endl;
 
 	
 /* 	avl.traverse();
@@ -47,9 +47,9 @@ int main(int nargas, char** vargs){
     }
 
     clock_t endSearch = clock();
-    double elapsedTimeSearch = double(endSearch - startSearch) / CLOCKS_PER_SEC;
+    double elapsedTimeSearch = double(endSearch - startSearch) / (CLOCKS_PER_SEC / 1000);
 
-    std::cout << "Tiempo de búsqueda: " << elapsedTimeSearch << " segundos" << std::endl;
+    std::cout << "Tiempo de búsqueda: " << elapsedTimeSearch << " milisegundos" << std::endl;
 
 	return 0;
 }

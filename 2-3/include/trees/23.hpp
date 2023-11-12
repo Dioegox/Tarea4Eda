@@ -8,7 +8,6 @@ namespace trees {
 class tt {
 private:
 	ttNode* root;
-	int treesize;
 public:
 	tt();
 	void insert_rec(int val, ttNode* node);
@@ -24,6 +23,7 @@ public:
 	ttNode* k_element_rec(int k, ttNode* node);
 	ttNode* k_element(int k);
 	virtual ~tt();
+
 
 	void splitNode(ttNode* parent, int index);
 };

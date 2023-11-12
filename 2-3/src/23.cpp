@@ -8,6 +8,17 @@ tt::tt():root(nullptr) {
 	// TODO Auto-generated constructor stub
 }
 
+int isLeaf(ttNode* node){
+	if(node->getLeft()== nullptr){
+		if(node->getMiddle()== nullptr){
+			if(node->getRight()== nullptr){
+				return 1;
+			}
+		}
+	}
+	return 0;
+}
+
 void tt::insert_rec(int val, ttNode* node){
 	if (node->getData2() == -1) {
         if (val < node->getData()) {
@@ -67,10 +78,16 @@ ttNode* tt::find_rec(int val, ttNode* node){
 
 	if (node->getData() == val){
 		ans = node;
+	} else if (node->getData2() == val){
+		ans = node;
 	}
+
 	else{
 		if (val < node->getData()){
 			ans = find_rec(val, node->getLeft());
+		}
+		else if (val > node->getData() && val < node->getData2()){
+			ans = find_rec(val, node->getMiddle());
 		}
 		else{
 			ans = find_rec(val, node->getRight());
