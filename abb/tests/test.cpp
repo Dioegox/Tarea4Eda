@@ -7,12 +7,12 @@ int main(int nargas, char** vargs){
 
 	std::srand(std::time(0));
     trees::ABB abb;
-    int numValuesToInsert = 1000000;
+    int numValuesToInsert = 10;
 
     int values[numValuesToInsert];
 
     for (int i = 0; i < numValuesToInsert; ++i) {
-        int randomValue = std::rand() % 100000000;
+        int randomValue = std::rand() % 100;
 		values[i] = randomValue;
     }
 
@@ -30,7 +30,7 @@ int main(int nargas, char** vargs){
     std::cout << "Tiempo de inserción: " << elapsedTimeInsert << " segundos" << std::endl;
 
 	
-/* 	abb.traverse();
+	abb.traverse();
 
 	trees::ABBNode* node = nullptr;
 	for (int k = 1; k<= 100; k++ ){
@@ -38,7 +38,7 @@ int main(int nargas, char** vargs){
 		if (node != nullptr){
 			std::cout << "k = " <<k << " --> "<< node->getData() << std::endl;
 		}
-	} */
+	}
 
 
     int numValuesToSearch = numValuesToInsert;

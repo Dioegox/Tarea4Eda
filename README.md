@@ -15,7 +15,7 @@ para correr ABB
 
 Para correr AVL
 
-1. cd abb
+1. cd avl
 2. mkdir build
 3. cd build
 4. cmake ..
