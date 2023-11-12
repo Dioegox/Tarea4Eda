@@ -15,9 +15,19 @@ para correr ABB
 
 Para correr AVL
 
-1. cd abb
+1. cd avl
 2. mkdir build
 3. cd build
 4. cmake ..
 5. make
-6. ./test
+6. ./test_avl
+
+Para correr 2-3
+
+1. cd a2-3
+2. mkdir build
+3. cd build
+4. cmake ..
+5. make
+6. ./test_2-3
+
