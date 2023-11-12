@@ -24,7 +24,7 @@ Para correr AVL
 
 Para correr 2-3
 
-1. cd a2-3
+1. cd 2-3
 2. mkdir build
 3. cd build
 4. cmake ..
