@@ -11,6 +11,7 @@ private:
 	int size;
 	ttNode* ptrMiddle;
 	int data2;
+	int level;
 public:
 	ttNode();
 	ttNode(int val);
