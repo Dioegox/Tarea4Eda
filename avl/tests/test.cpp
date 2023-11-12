@@ -10,12 +10,16 @@ int main(int nargas, char** vargs){
     int numValuesToInsert = 1000000;
 
 	int values[numValuesToInsert];
+    for (int i = 0; i < numValuesToInsert; ++i) {
+        int randomValue = std::rand() % 100000000;
+		values[i] = randomValue;
+    }
+
+
     clock_t startInsert = clock();
 
     for (int i = 0; i < numValuesToInsert; ++i) {
-        int randomValue = std::rand() % 100000000;
-        avl.insert(randomValue);
-		values[i] = randomValue;
+        avl.insert(values[i]);
     }
 
     clock_t endInsert = clock();

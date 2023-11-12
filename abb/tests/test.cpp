@@ -9,13 +9,17 @@ int main(int nargas, char** vargs){
     trees::ABB abb;
     int numValuesToInsert = 1000000;
 
-	int values[numValuesToInsert];
-    clock_t startInsert = clock();
+    int values[numValuesToInsert];
 
     for (int i = 0; i < numValuesToInsert; ++i) {
         int randomValue = std::rand() % 100000000;
-        abb.insert(randomValue);
 		values[i] = randomValue;
+    }
+
+    clock_t startInsert = clock();
+
+    for (int i = 0; i < numValuesToInsert; ++i) {
+        abb.insert(values[i]);
     }
 
 	abb.updateSize();
